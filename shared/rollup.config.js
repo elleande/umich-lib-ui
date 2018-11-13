@@ -11,7 +11,8 @@ TODO:
 export default {
 	external: [
 		'react',
-		'react-dom'
+		'react-dom',
+		'axios'
 	],
 	globals: {
 		'react': 'React',
@@ -20,10 +21,9 @@ export default {
 	input: 'src/index.js',
 	output: [
     {
-      file: 'dist/bundle.js',
-			format: 'iife'
-		}
-		/*
+      file: 'dist/umd.js',
+			format: 'umd'
+		},
 		{
       file: 'dist/esm.js',
 			format: 'esm'
@@ -32,7 +32,6 @@ export default {
       file: 'dist/cjs.js',
 			format: 'cjs'
 		}
-		*/
 	],
   plugins: [
 		resolve(),
