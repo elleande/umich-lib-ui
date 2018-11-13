@@ -1,7 +1,12 @@
 {
   "name": "@umich-lib-ui/chat",
   "version": "0.1.0-alpha.17",
-  "module": "lib/index.js",
+  "main": "dist/cjs.js",
+  "browser": "dist/umd.js",
+  "module": "dist/esm.js",
+  "scripts": {
+    "build": "node ../../shared/build-package"
+  },
   "dependencies": {
     "@umich-lib-ui/button": "^0.1.0-alpha.17",
     "@umich-lib-ui/icon": "^0.1.0-alpha.17",
@@ -11,7 +16,8 @@
   },
   "peerDependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "prop-types": "^15.6.2"
   },
   "files": [
     "lib"
