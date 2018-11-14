@@ -12,44 +12,38 @@ export default {
 	external: [
 		'react',
 		'react-dom',
-		'axios'
+		'prop-types'
 	],
-	globals: {
-		'react': 'React',
-		'react-dom': 'ReactDom'
-	},
 	input: 'src/index.js',
 	output: [
     {
       file: 'dist/umd.js',
-			format: 'umd'
+			format: 'umd',
+			globals: {
+				'react': 'React',
+				'react-dom': 'ReactDom'
+			}
 		},
 		{
       file: 'dist/esm.js',
 			format: 'esm'
-    },
-		{
-      file: 'dist/cjs.js',
-			format: 'cjs'
-		}
+    }
 	],
   plugins: [
 		resolve(),
     babel({
-			"plugins": [
-				"transform-react-remove-prop-types",
+			exclude: 'node_modules/**',
+			plugins: [
 				"@babel/proposal-class-properties",
 				"@babel/proposal-object-rest-spread"
 			],
-			"presets":  [
+			presets:  [
 				"@babel/react",
 				["@babel/env", {
 					"modules": false
 				}]
 			],
 		}),
-		commonjs({
-			include: 'node_modules/**'
-		})
+		commonjs()
 	]
 };

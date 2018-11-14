@@ -1,9 +1,8 @@
 import React from 'react'
-import axios from 'axios'
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types'
 import Button from '@umich-lib-ui/button'
 import Icon from '@umich-lib-ui/icon'
-import styled from 'react-emotion';
+import styled from 'react-emotion'
 import {
   BREAKPOINTS
 } from '@umich-lib-ui/styles'
@@ -104,7 +103,7 @@ class Chat extends React.Component {
     /**
       Get the online status of the LibraryH3lp service.
     */
-    axios.get(presenceUrl)
+    fetch(presenceUrl)
       .then((response) => {
         if (response.data) {
           switch (response.data) {

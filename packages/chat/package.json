@@ -11,13 +11,12 @@
     "@umich-lib-ui/button": "^0.1.0-alpha.17",
     "@umich-lib-ui/icon": "^0.1.0-alpha.17",
     "@umich-lib-ui/styles": "^0.1.0-alpha.17",
-    "axios": "^0.18.0",
-    "react-emotion": "^9.2.12"
+    "react-emotion": "^9.2.12",
+    "prop-types": "^15.6.2"
   },
   "peerDependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "prop-types": "^15.6.2"
+    "react-dom": "^16.4.0"
   },
   "files": [
     "lib"
